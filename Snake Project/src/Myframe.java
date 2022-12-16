@@ -41,6 +41,11 @@ public class Myframe extends JFrame implements KeyListener {
 						repaint();
 				}
 				body.Move(head);
+				/*
+				can combine these movements into two lines step 
+				head.x += (50 * dx);
+				head.y += (50 * dy);
+				*/
 				if (dx == 1) {
 					head.x += 50;
 				}
@@ -87,6 +92,8 @@ public class Myframe extends JFrame implements KeyListener {
 		}
 		g.setColor(Color.red);
 		g.fillOval((int) ApplePosX + offsetx, (int) ApplePosY +offsety, 50, 50); //apple
+		//for the drawString you just needed parens around the "" + score 
+		// g.drawString(("" + score), x, y); 
 		
 	}
 	@Override
